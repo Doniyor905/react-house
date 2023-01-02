@@ -1,4 +1,10 @@
-
+import React from "react";
+import Services from "./components/Services";
+import Product from "./components/Product";
+import Guarantee from "./components/Guarantee";
+import About from "./components/About";
+import Portfolio from "./components/Portfolio";
+import Question from "./components/Question";
 function App() {
   return (
     <div className="App">
@@ -38,19 +44,19 @@ function App() {
               </h1>
               <div className="header__intro-service">
                 <div className="intro-service-block">
-                  <img src="./img/header-icon.svg" alt="" />
+                  <img src="./img/header/header-icon.svg" alt="" />
                   <p>Современные окна
                     и балконные конструкции
                     по доступным ценам</p>
                 </div>
                 <div className="intro-service-block">
-                  <img src="./img/header-icon-2.svg" alt="" />
+                  <img src="./img/header/header-icon-2.svg" alt="" />
                   <p>Квалифицированный
                     подход к решению задач
                     любой сложности</p>
                 </div>
                 <div className="intro-service-block">
-                  <img src="./img/header-icon-3.svg" alt="" />
+                  <img src="./img/header/header-icon-3.svg" alt="" />
                   <p>Гарантия
                     высочайшего качества
                     нашей продукции</p>
@@ -77,6 +83,14 @@ function App() {
           </div>
         </div>
       </div>
+
+      <Services />
+      <Product />
+      <Guarantee />
+      <About />
+      <Portfolio />
+      <Question />
+      
     </div>
   );
 }

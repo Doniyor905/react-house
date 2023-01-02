@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1230px;
   width: 100%;
   margin: 0 auto;
   padding: 0 15px;
@@ -26,7 +26,7 @@ body {
   align-items: center;
 
   &__intro {
-    background: url("../public/img/header-bg.jpg");
+    background: url("../public/img/header/header-bg.jpg");
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;

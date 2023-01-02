@@ -1,0 +1,71 @@
+@import "../../themes.scss";
+@import "../../index.scss";
+
+.guarantee {
+    margin-bottom: 95px;
+
+    &__btn {
+        color: #fff;
+        background-color: $blue;
+        width: 256px;
+        height: 54px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 22px;
+        font-size: 16px;
+        font-weight: 700;
+        border: 0;
+        border-radius: 3px;
+        margin: 0 auto;
+        margin-top: 50px;
+        cursor: pointer;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &__wrapper {
+        background-image: url("../../../public/img/guarantee/guarantee-bg.png");
+        background-color: #000;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 439px;
+        padding-top: 35px;
+    }
+
+    &__title {
+        margin-bottom: 90px;
+
+        img {
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .guarantee__itemImg {
+            margin-bottom: 20px;
+            height: 97px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        p {
+            color: #fff;
+            font-size: 16px;
+            width: 196px;
+            text-align: center;
+        }
+    }
+}

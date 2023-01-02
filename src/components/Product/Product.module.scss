@@ -1,0 +1,74 @@
+@import "../../index.scss";
+@import "../../themes.scss";
+
+.product {
+    margin-bottom: 50px;
+
+    &__inner {
+        height: 461px;
+        background-color: #FFF;
+        display: flex;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+
+        .product__itemPrice {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 100%;
+
+            .price__title {
+                color: $orange;
+                font-size: 36px;
+            }
+
+            .price__text {
+                color: $blue;
+                font-size: 18px;
+                width: 378px;
+            }
+
+            .price__report {
+                line-height: 40px;
+                color: $blue;
+                font-size: 18px;
+                font-weight: 700;
+            }
+        }
+    }
+
+    &__title {
+        text-align: center;
+        margin-bottom: 34px;
+        color: $blue;
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+        margin-bottom: 30px;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 130px;
+        height: 39px;
+        transition: 0.5s ease;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $orange;
+            border-radius: 3px;
+            color: #fff;
+        }
+    }
+}
