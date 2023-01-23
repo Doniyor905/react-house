@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div className="App">
-      <ModalServices/>
+      {/* <ModalServices/> */}
       {modalCalcOpen ? <ModalCalc  onModalCalcClose={() => setmodalCalcOpen(false)} /> : null}
       {modalOpen ? <ModalRazmer  onClose={() => setModalOpen(false)} /> : null}
       <header className="header">
