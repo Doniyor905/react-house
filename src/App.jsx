@@ -1,13 +1,24 @@
 import React from "react";
+// import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
 import Services from "./components/Services";
 import Product from "./components/Product";
 import Guarantee from "./components/Guarantee";
-import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Question from "./components/Question";
+import ModalRazmer from "./components/ModalRazmer";
+import ModalCalc from "./components/ModalCalc";
+import ModalServices from "./components/ModalServices";
 function App() {
+  const [modalOpen, setModalOpen] = React.useState(false);
+  const [modalCalcOpen, setmodalCalcOpen] = React.useState(false);
+
   return (
     <div className="App">
+      <ModalServices/>
+      {modalCalcOpen ? <ModalCalc  onModalCalcClose={() => setmodalCalcOpen(false)} /> : null}
+      {modalOpen ? <ModalRazmer  onClose={() => setModalOpen(false)} /> : null}
       <header className="header">
         <div className="container">
           <nav className="nav">
@@ -21,11 +32,11 @@ function App() {
               <li><a href="#!" className="nav__link"> <span className="nav__link-line"></span> Контакты</a></li>
             </ul>
             <div className="nav__buttons">
-              <div className="nav__btn-order">
+              <div className="nav__btn-order" onClick={() => setModalOpen(true)}>
                 <img src="./img/razmer.svg" alt="" />
                 Заявка на замер
               </div>
-              <div className="nav__btn-price">
+              <div className="nav__btn-price" onClick={() => setmodalCalcOpen(true)}>
                 <img src="./img/calc.png" alt="" />
                 Заказать расчет
               </div>
@@ -86,11 +97,11 @@ function App() {
 
       <Services />
       <Product />
-      <Guarantee />
-      <About />
+      <Guarantee modalCalcOpen={modalCalcOpen} setmodalCalcOpen={setmodalCalcOpen} />
+      {/* <About setModalOpen={setModalOpen} /> */}
       <Portfolio />
       <Question />
-      
+
     </div>
   );
 }

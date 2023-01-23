@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./Guarantee.module.scss";
 
-function Guarantee() {
+function Guarantee({modalCalcOpen, setmodalCalcOpen}) {
     return (
         <section className={classes.guarantee}>
             <div className="container">
@@ -53,7 +53,7 @@ function Guarantee() {
                         </div>
                     </div>
                 </div>
-                <button className={classes.guarantee__btn}>
+                <button className={classes.guarantee__btn} onClick={() => setmodalCalcOpen(true)}>
                     <img src="./img/calc.png" alt="" />
                     Заказать расчет
                 </button>

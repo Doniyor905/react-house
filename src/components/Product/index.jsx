@@ -1,5 +1,10 @@
 import React from "react";
+import { Route, Routes, Link } from "react-router-dom";
 import classes from "./Product.module.scss"
+import Standart from "../../routers/Standart"
+import Biznes from "../../routers/Biznes"
+import Premium from "../../routers/Premium"
+import Exclusive from "../../routers/Exclusive"
 
 function Product() {
     return (
@@ -7,43 +12,37 @@ function Product() {
             <div className="container">
                 <h2 className={classes.product__title}>Продукция</h2>
                 <ul className={classes.product__nav}>
-                    <li className={classes.product__link}>
-                        Стандарт
-                    </li>
+                    <Link to="/">
+                        <li className={classes.product__link}>
+                            Стандарт
+                        </li>
+                    </Link>
 
-                    <li className={classes.product__link}>
-                        Бизнес
-                    </li>
+                    <Link to="/biznes">
+                        <li className={classes.product__link}>
+                            Бизнес
+                        </li>
+                    </Link>
 
-                    <li className={classes.product__link}>
-                        Премиум
-                    </li>
+                    <Link to="/premium">
+                        <li className={classes.product__link}>
+                            Премиум
+                        </li>
+                    </Link>
 
-                    <li className={classes.product__link}>
-                        Эксклюзив
-                    </li>
+                    <Link to="/exclusive">
+                        <li className={classes.product__link}>
+                            Эксклюзив
+                        </li>
+                    </Link>
                 </ul>
                 <div className={classes.product__inner}>
-                    <div className={classes.product__item}>
-                        <div className={classes.product__itemImg}>
-                            <img src="./img/product-img.jpg" alt="" />
-                        </div>
-
-                        <div className={classes.product__itemPrice}>
-                            <h2 className={classes.price__title}>Rehau Blitz New</h2>
-                            <p className={classes.price__text}>
-                                Сохраняют тепло в доме, защищают от шума
-                                и вписываются в любой интерьер.
-                                Практичный выбор</p>
-
-                            <p className={classes.price__report}>
-                                Системная глубина ...............................................60/60 мм <br />
-                                Ширина стеклопакета...........................................24/31 мм<br />
-                                Воздушные камеры...............................................3 <br />
-                                Теплосопротивление............................................0,70 м2С/ВТ <br />
-                            </p>
-                        </div>
-                    </div>
+                    <Routes>
+                        <Route path="/" exact element={<Standart />} />
+                        <Route path="/biznes" exact element={<Biznes />} />
+                        <Route path="/premium" exact element={<Premium />} />
+                        <Route path="/exclusive" exact element={<Exclusive />} />
+                    </Routes>
                 </div>
             </div>
         </section>

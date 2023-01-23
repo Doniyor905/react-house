@@ -1,0 +1,84 @@
+@import "../../themes.scss";
+
+.modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+
+    &__inner {
+        width: 1000px;
+        height: 649px;
+        // background-color: ;
+        padding: 40px 0px;
+        background: url("../../../public/img/modalServices/bg.png"), #fff;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .modal__title {
+            color: $blue;
+            font-size: 24px;
+        }
+
+        .modal__subtitle {
+            width: 257px;
+            font-size: 16px;
+            color: #000;
+            line-height: 19px;
+            margin: 20px 0px;
+        }
+
+        .modal__buttons {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            .modal__blue {
+                background-color: $blue;
+                width: 169px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                color: #fff;
+                border: 0;
+                border-radius: 3px;
+                font-size: 13px;
+                font-weight: 600;
+                cursor: pointer;
+            }
+            .modal__orange {
+                background-color: $orange;
+                width: 169px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                color: #fff;
+                border: 0;
+                border-radius: 3px;
+                font-size: 13px;
+                font-weight: 600;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .wrapper {
+        max-width: 757px;
+        width: 100%;
+        margin: 0 auto;
+    }
+}

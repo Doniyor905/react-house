@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./About.module.scss";
 
-function About() {
+function About({ setModalOpen }) {
     return (
         <section className={classes.about}>
             <div className="container">
@@ -80,7 +80,7 @@ function About() {
                         </div>
                     </div>
                 </div>
-                <button className={classes.about__btn}>
+                <button className={classes.about__btn} onClick={() => setModalOpen(true)}>
                     <img src="./img/razmer.svg" alt="" />
                     Оформить заявку на замер
                 </button>
